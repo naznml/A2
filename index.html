@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="English Listening, Grammar and Reading Test"
+  >
+
+  <title>English Test · 50 Questions</title>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-soft: #dbeafe;
+
+      --secondary: #7c3aed;
+
+      --background: #f4f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+
+      --text: #172033;
+      --muted: #64748b;
+      --border: #dbe3ef;
+
+      --correct: #15803d;
+      --correct-bg: #dcfce7;
+      --correct-border: #86efac;
+
+      --wrong: #b91c1c;
+      --wrong-bg: #fee2e2;
+      --wrong-border: #fca5a5;
+
+      --warning-bg: #fff7ed;
+      --warning-border: #fdba74;
+
+      --highlight: #fef3c7;
+      --highlight-border: #f59e0b;
+
+      --shadow:
+        0 16px 40px rgba(15, 23, 42, 0.08);
+
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(37, 99, 235, 0.12),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at top right,
+          rgba(124, 58, 237, 0.10),
+          transparent 30%
+        ),
+        var(--background);
+
+      color: var(--text);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      line-height: 1.6;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    .page-header {
+      padding: 28px 16px 20px;
+    }
+
+    .header-inner {
+      width: min(100%, 1050px);
+      margin: 0 auto;
+      padding: clamp(22px, 5vw, 42px);
+
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(239, 246, 255, 0.92)
+        );
+
+      box-shadow: var(--shadow);
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .site-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 7px 13px;
+
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+
+      padding: 5px;
+
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #ffffff;
+    }
+
+    .language-button {
+      min-width: 92px;
+      padding: 9px 13px;
+
+      border: 0;
+      border-radius: 9px;
+
+      background: transparent;
+      color: var(--muted);
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .language-button.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .page-title {
+      margin: 22px 0 10px;
+
+      font-size: clamp(32px, 8vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .page-description {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .test-overview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .overview-card {
+      padding: 16px;
+
+      border: 1px solid var(--border);
+      border-radius: 15px;
+
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .overview-card span {
+      display: block;
+
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .overview-card strong {
+      display: block;
+      margin-top: 2px;
+
+      color: var(--primary-dark);
+      font-size: 23px;
+    }
+
+    .page-main {
+      width: min(calc(100% - 28px), 1050px);
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    .main-section {
+      margin-top: 25px;
+    }
+
+    .section-heading {
+      margin-bottom: 18px;
+      padding: 0 3px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+
+      font-size: clamp(27px, 7vw, 40px);
+      letter-spacing: -0.025em;
+    }
+
+    .section-heading p {
+      max-width: 760px;
+      margin: 7px 0 0;
+      color: var(--muted);
+    }
+
+    .listening-card {
+      margin-bottom: 25px;
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .listening-card-header {
+      padding: clamp(19px, 5vw, 29px);
+
+      background:
+        linear-gradient(
+          135deg,
+          #eff6ff,
+          #f5f3ff
+        );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .listening-number {
+      display: inline-flex;
+      padding: 6px 11px;
+
+      border-radius: 999px;
+
+      background: #ffffff;
+      color: var(--primary-dark);
+
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .listening-title {
+      margin: 12px 0 4px;
+      font-size: clamp(23px, 6vw, 32px);
+      line-height: 1.25;
+    }
+
+    .listening-subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .audio-box {
+      margin-top: 18px;
+      padding: 14px;
+
+      border: 1px solid #bfdbfe;
+      border-radius: 15px;
+
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .audio-file-name {
+      display: block;
+      margin-bottom: 8px;
+
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+      word-break: break-word;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+
+      padding: 13px;
+
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+
+      scrollbar-width: thin;
+    }
+
+    .tab-button {
+      flex: 0 0 auto;
+
+      padding: 10px 14px;
+
+      border: 1px solid var(--border);
+      border-radius: 11px;
+
+      background: var(--surface-soft);
+      color: var(--muted);
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .tab-button.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .tab-panel {
+      display: none;
+      padding: clamp(17px, 5vw, 28px);
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .test-instruction {
+      margin: 0 0 19px;
+      padding: 13px 15px;
+
+      border: 1px solid var(--warning-border);
+      border-radius: 12px;
+
+      background: var(--warning-bg);
+      color: #9a3412;
+
+      font-size: 14px;
+    }
+
+    .question-card {
+      margin-bottom: 17px;
+      padding: clamp(16px, 4vw, 22px);
+
+      border: 1px solid var(--border);
+      border-radius: 17px;
+
+      background: var(--surface-soft);
+    }
+
+    .question-number {
+      display: inline-block;
+      margin-bottom: 8px;
+
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .question-text {
+      margin: 0 0 15px;
+
+      font-size: clamp(17px, 4.5vw, 20px);
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .answer-options {
+      display: grid;
+      gap: 9px;
+    }
+
+    .answer-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      padding: 12px 13px;
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      background: #ffffff;
+
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .answer-option:hover {
+      border-color: #93c5fd;
+      transform: translateY(-1px);
+    }
+
+    .answer-option input {
+      flex: 0 0 auto;
+      margin-top: 5px;
+      accent-color: var(--primary);
+    }
+
+    .answer-letter {
+      flex: 0 0 auto;
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    .answer-option.correct-answer {
+      border-color: var(--correct-border);
+      background: var(--correct-bg);
+      color: var(--correct);
+    }
+
+    .answer-option.wrong-answer {
+      border-color: var(--wrong-border);
+      background: var(--wrong-bg);
+      color: var(--wrong);
+    }
+
+    .question-explanation {
+      display: none;
+
+      margin-top: 15px;
+      padding: 15px;
+
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+
+      background: #eff6ff;
+    }
+
+    .question-explanation.visible {
+      display: block;
+    }
+
+    .question-explanation h4 {
+      margin: 0 0 7px;
+      color: var(--primary-dark);
+    }
+
+    .question-explanation p {
+      margin: 7px 0 0;
+    }
+
+    .evidence-quote {
+      padding: 10px 12px;
+
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+
+      background: #ffffff;
+      color: #1e3a8a;
+
+      font-style: italic;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-top: 22px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      min-height: 48px;
+      padding: 11px 18px;
+
+      border-radius: 12px;
+
+      font-weight: 850;
+    }
+
+    .primary-button {
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .primary-button:hover {
+      background: var(--primary-dark);
+    }
+
+    .secondary-button {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text);
+    }
+
+    .block-result {
+      display: none;
+
+      margin-top: 18px;
+      padding: 18px;
+
+      border: 1px solid #bfdbfe;
+      border-radius: 14px;
+
+      background: #eff6ff;
+    }
+
+    .block-result.visible {
+      display: block;
+    }
+
+    .block-result strong {
+      color: var(--primary-dark);
+      font-size: 19px;
+    }
+
+    .block-result p {
+      margin: 7px 0 0;
+      color: var(--muted);
+    }
+
+    .content-block {
+      padding: 4px 1px;
+    }
+
+    .content-block h3 {
+      margin: 0 0 16px;
+      font-size: 23px;
+    }
+
+    .transcript-text {
+      padding: 18px;
+
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      background: var(--surface-soft);
+      line-height: 1.9;
+    }
+
+    .transcript-text p {
+      margin: 0 0 17px;
+    }
+
+    .transcript-answer {
+      transition: 0.25s ease;
+    }
+
+    .transcript-answer.revealed {
+      padding: 2px 4px;
+
+      border-radius: 5px;
+      background: var(--highlight);
+
+      box-shadow:
+        inset 0 -2px 0 var(--highlight-border);
+    }
+
+    .question-marker {
+      display: none;
+
+      margin-right: 4px;
+      padding: 2px 6px;
+
+      border-radius: 999px;
+      background: #f59e0b;
+      color: #ffffff;
+
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .transcript-answer.revealed .question-marker {
+      display: inline-block;
+    }
+
+    .locked-message {
+      margin-bottom: 15px;
+      padding: 12px 14px;
+
+      border: 1px solid var(--warning-border);
+      border-radius: 12px;
+
+      background: var(--warning-bg);
+      color: #9a3412;
+
+      font-size: 14px;
+    }
+
+    .language-content {
+      display: none;
+    }
+
+    html[lang="kk"] .language-content.lang-kk {
+      display: initial;
+    }
+
+    html[lang="ru"] .language-content.lang-ru {
+      display: initial;
+    }
+
+    div.language-content,
+    section.language-content {
+      display: none;
+    }
+
+    html[lang="kk"] div.language-content.lang-kk,
+    html[lang="kk"] section.language-content.lang-kk,
+    html[lang="ru"] div.language-content.lang-ru,
+    html[lang="ru"] section.language-content.lang-ru {
+      display: block;
+    }
+
+    @media (max-width: 720px) {
+      .page-header {
+        padding: 14px 12px 12px;
+      }
+
+      .page-main {
+        width: min(calc(100% - 20px), 1050px);
+      }
+
+      .header-top {
+        align-items: stretch;
+      }
+
+      .language-switcher {
+        width: 100%;
+      }
+
+      .language-button {
+        flex: 1;
+      }
+
+      .test-overview {
+        grid-template-columns: 1fr;
+      }
+
+      .result-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .primary-button,
+      .secondary-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="page-header">
+
+    <div class="header-inner">
+
+      <div class="header-top">
+
+        <span class="site-label">
+          English · 50 Questions
+        </span>
+
+        <div
+          class="language-switcher"
+          aria-label="Language switcher"
+        >
+
+          <button
+            type="button"
+            class="language-button active"
+            data-language="kk"
+          >
+            Қазақша
+          </button>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="ru"
+          >
+            Русский
+          </button>
+
+        </div>
+
+      </div>
+
+      <h1 class="page-title">
+        English Test
+      </h1>
+
+      <p class="page-description">
+
+        <span class="language-content lang-kk">
+          Listening, Grammar және Reading бөлімдерінен тұратын
+          50 сұрақтық толық тест. Әр бөлімнің жеке нәтижесі және
+          соңында жалпы нәтиже көрсетіледі.
+        </span>
+
+        <span class="language-content lang-ru">
+          Полный тест из 50 вопросов по разделам Listening,
+          Grammar и Reading. Каждый раздел имеет отдельный результат,
+          а в конце показывается общий балл.
+        </span>
+
+      </p>
+
+      <div class="test-overview">
+
+        <div class="overview-card">
+          <span>Listening</span>
+          <strong>16</strong>
+        </div>
+
+        <div class="overview-card">
+          <span>Grammar</span>
+          <strong>18</strong>
+        </div>
+
+        <div class="overview-card">
+          <span>Reading</span>
+          <strong>16</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="page-main">
+
+    <!-- LISTENING SECTION -->
+
+    <section
+      class="main-section"
+      id="listening-section"
+    >
+
+      <div class="section-heading">
+
+        <h2>Listening</h2>
+
+        <p>
+
+          <span class="language-content lang-kk">
+            Аудионы тыңдап, әр сұрақ бойынша бір дұрыс жауапты таңдаңыз.
+            Нәтижені көрсеткеннен кейін дұрыс жауап, түсіндірме және
+            transcript ішіндегі дәлел көрсетіледі.
+          </span>
+
+          <span class="language-content lang-ru">
+            Прослушайте аудио и выберите один правильный ответ
+            в каждом вопросе. После показа результата появятся
+            правильный ответ, объяснение и доказательство в transcript.
+          </span>
+
+        </p>
+
+      </div>
+
+      <!-- LISTENING 1 -->
+
+      <article
+        class="listening-card"
+        id="listening-1"
+        data-listening-id="1"
+      >
+
+        <div class="listening-card-header">
+
+          <span class="listening-number">
+            Listening 1 · Questions 1–8
+          </span>
+
+          <h2 class="listening-title">
+            The Longest Marriage
+          </h2>
+
+          <p class="listening-subtitle">
+
+            <span class="language-content lang-kk">
+              Аудионы мұқият тыңдап, тест сұрақтарына жауап беріңіз.
+            </span>
+
+            <span class="language-content lang-ru">
+              Внимательно прослушайте аудио и ответьте на вопросы теста.
+            </span>
+
+          </p>
+
+          <div class="audio-box">
+
+            <span class="audio-file-name">
+              Новая запись 40 2.m4a
+            </span>
+
+            <audio controls preload="metadata">
+              <source
+                src="Новая запись 40 2.m4a"
+                type="audio/mp4"
+              >
+
+              <span class="language-content lang-kk">
+                Сіздің браузеріңіз аудионы қолдамайды.
+              </span>
+
+              <span class="language-content lang-ru">
+                Ваш браузер не поддерживает аудио.
+              </span>
+            </audio>
+
+          </div>
+
+        </div>
+
+        <div class="tab-buttons">
+
+          <button
+            type="button"
+            class="tab-button active"
+            data-tab-target="listening-1-test"
+          >
+            Test
+          </button>
+
+          <button
+            type="button"
+            class="tab-button"
+            data-tab-target="listening-1-transcript"
+          >
+            Transcript EN
+          </button>
+
+          <button
+            type="button"
+            class="tab-button"
+            data-tab-target="listening-1-translation"
+          >
+            <span class="language-content lang-kk">
+              Аударма
+            </span>
+
+            <span class="language-content lang-ru">
+              Перевод
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="tab-button"
+            data-tab-target="listening-1-vocabulary"
+          >
+            Vocabulary
+          </button>
+
+          <button
+            type="button"
+            class="tab-button"
+            data-tab-target="listening-1-strategy"
+          >
+            <span class="language-content lang-kk">
+              Қалай орындау керек
+            </span>
+
+            <span class="language-content lang-ru">
+              Как решить
+            </span>
+          </button>
+
+        </div>
+
+        <!-- LISTENING 1 TEST -->
+
+        <div
+          class="tab-panel active"
+          id="listening-1-test"
+        >
+
+          <p class="test-instruction">
+
+            <span class="language-content lang-kk">
+              Әр сұрақ бойынша бір дұрыс жауапты таңдаңыз.
+              Нәтижені көрсеткеннен кейін дұрыс жауап жасыл,
+              ал таңдалған қате жауап қызыл түспен белгіленеді.
+          </span>
+
+            <span class="language-content lang-ru">
+              Выберите один правильный ответ в каждом вопросе.
+              После показа результата правильный ответ будет выделен
+              зелёным, а выбранный неправильный — красным.
+            </span>
+
+          </p>
+
+          <form
+            class="listening-test-form"
+            id="listening-1-test-form"
+          >
+
+            <!-- QUESTION 1 -->
+
+            <div
+              class="question-card listening-question"
+              data-question="1"
+              data-correct="A"
+            >
+
+              <span class="question-number">
+                Question 1
+              </span>
+
+              <p class="question-text">
+                Britain’s Queen Elizabeth sent the world record-breaking pair __________
+              </p>
+
+              <div class="answer-options">
+
+                <label
+                  class="answer-option"
+                  data-option="A"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question1"
+                    value="A"
+                  >
+
+                  <span class="answer-letter">A)</span>
+                  <span>a congratulatory card</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="B"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question1"
+                    value="B"
+                  >
+
+                  <span class="answer-letter">B)</span>
+                  <span>a congrat</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="C"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question1"
+                    value="C"
+                  >
+
+                  <span class="answer-letter">C)</span>
+                  <span>a congratulation card</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="D"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question1"
+                    value="D"
+                  >
+
+                  <span class="answer-letter">D)</span>
+                  <span>a congratulatory present</span>
+                </label>
+
+              </div>
+
+              <div class="question-explanation">
+
+                <div class="language-content lang-kk">
+
+                  <h4>
+                    Дұрыс жауап: A) a congratulatory card
+                  </h4>
+
+                  <p>
+                    <strong>A congratulatory card</strong> —
+                    құттықтау ашықхаты. Аудиода патшайымның
+                    жұпқа құттықтау ашықхатын жібергені нақты айтылған.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “Britain’s Queen Elizabeth sent the world
+                    record-breaking pair a congratulatory card.”
+                  </p>
+
+                </div>
+
+                <div class="language-content lang-ru">
+
+                  <h4>
+                    Правильный ответ: A) a congratulatory card
+                  </h4>
+
+                  <p>
+                    <strong>A congratulatory card</strong> —
+                    поздравительная открытка. В аудио прямо говорится,
+                    что королева отправила паре поздравительную открытку.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “Britain’s Queen Elizabeth sent the world
+                    record-breaking pair a congratulatory card.”
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- QUESTION 2 -->
+
+            <div
+              class="question-card listening-question"
+              data-question="2"
+              data-correct="A"
+            >
+
+              <span class="question-number">
+                Question 2
+              </span>
+
+              <p class="question-text">
+                The record breakers celebrated their anniversary with a party __________
+              </p>
+
+              <div class="answer-options">
+
+                <label
+                  class="answer-option"
+                  data-option="A"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question2"
+                    value="A"
+                  >
+
+                  <span class="answer-letter">A)</span>
+                  <span>in their home</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="B"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question2"
+                    value="B"
+                  >
+
+                  <span class="answer-letter">B)</span>
+                  <span>in their friends’ home</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="C"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question2"
+                    value="C"
+                  >
+
+                  <span class="answer-letter">C)</span>
+                  <span>in their hotel</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="D"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question2"
+                    value="D"
+                  >
+
+                  <span class="answer-letter">D)</span>
+                  <span>in family restaurant</span>
+                </label>
+
+              </div>
+
+              <div class="question-explanation">
+
+                <div class="language-content lang-kk">
+
+                  <h4>
+                    Дұрыс жауап: A) in their home
+                  </h4>
+
+                  <p>
+                    <strong>In their home</strong> — олардың үйінде.
+                    Мерейтойлық кеш қонақүйде немесе мейрамханада емес,
+                    ерлі-зайыптылардың өз үйінде өткен.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “The record breakers celebrated their anniversary
+                    with a party in their home...”
+                  </p>
+
+                </div>
+
+                <div class="language-content lang-ru">
+
+                  <h4>
+                    Правильный ответ: A) in their home
+                  </h4>
+
+                  <p>
+                    <strong>In their home</strong> — в их доме.
+                    Праздник проходил не в отеле и не в ресторане,
+                    а дома у супружеской пары.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “The record breakers celebrated their anniversary
+                    with a party in their home...”
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- QUESTION 3 -->
+
+            <div
+              class="question-card listening-question"
+              data-question="3"
+              data-correct="A"
+            >
+
+              <span class="question-number">
+                Question 3
+              </span>
+
+              <p class="question-text">
+                __________ celebrated their anniversary with a party
+              </p>
+
+              <div class="answer-options">
+
+                <label
+                  class="answer-option"
+                  data-option="A"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question3"
+                    value="A"
+                  >
+
+                  <span class="answer-letter">A)</span>
+                  <span>The record breakers</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="B"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question3"
+                    value="B"
+                  >
+
+                  <span class="answer-letter">B)</span>
+                  <span>the BBC</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="C"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question3"
+                    value="C"
+                  >
+
+                  <span class="answer-letter">C)</span>
+                  <span>Queen Elizabeth</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="D"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question3"
+                    value="D"
+                  >
+
+                  <span class="answer-letter">D)</span>
+                  <span>British people</span>
+                </label>
+
+              </div>
+
+              <div class="question-explanation">
+
+                <div class="language-content lang-kk">
+
+                  <h4>
+                    Дұрыс жауап: A) The record breakers
+                  </h4>
+
+                  <p>
+                    <strong>The record breakers</strong> —
+                    рекорд орнатқан адамдар. Мәтінде мерейтойды
+                    Percy мен Florence, яғни рекорд иелері атап өткені айтылған.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “The record breakers celebrated their anniversary
+                    with a party in their home...”
+                  </p>
+
+                </div>
+
+                <div class="language-content lang-ru">
+
+                  <h4>
+                    Правильный ответ: A) The record breakers
+                  </h4>
+
+                  <p>
+                    <strong>The record breakers</strong> —
+                    рекордсмены. Именно Percy и Florence,
+                    установившие рекорд, праздновали годовщину.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “The record breakers celebrated their anniversary
+                    with a party in their home...”
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- QUESTION 4 -->
+
+            <div
+              class="question-card listening-question"
+              data-question="4"
+              data-correct="A"
+            >
+
+              <span class="question-number">
+                Question 4
+              </span>
+
+              <p class="question-text">
+                Percy Arrowsmith and Florence celebrated their ………wedding anniversary
+              </p>
+
+              <div class="answer-options">
+
+                <label
+                  class="answer-option"
+                  data-option="A"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question4"
+                    value="A"
+                  >
+
+                  <span class="answer-letter">A)</span>
+                  <span>eightieth</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="B"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question4"
+                    value="B"
+                  >
+
+                  <span class="answer-letter">B)</span>
+                  <span>eight</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="C"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question4"
+                    value="C"
+                  >
+
+                  <span class="answer-letter">C)</span>
+                  <span>eighty</span>
+                </label>
+
+                <label
+                  class="answer-option"
+                  data-option="D"
+                >
+                  <input
+                    type="radio"
+                    name="listening1-question4"
+                    value="D"
+                  >
+
+                  <span class="answer-letter">D)</span>
+                  <span>the eighties</span>
+                </label>
+
+              </div>
+
+              <div class="question-explanation">
+
+                <div class="language-content lang-kk">
+
+                  <h4>
+                    Дұрыс жауап: A) eightieth
+                  </h4>
+
+                  <p>
+                    <strong>Eightieth</strong> — сексенінші.
+                    Anniversary сөзінің алдында реттік сан қолданылады:
+                    the eightieth wedding anniversary.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “Percy Arrowsmith, 105, and 100-year-old Florence
+                    celebrated their eightieth wedding anniversary...”
+                  </p>
+
+                </div>
+
+                <div class="language-content lang-ru">
+
+                  <h4>
+                    Правильный ответ: A) eightieth
+                  </h4>
+
+                  <p>
+                    <strong>Eightieth</strong> — восьмидесятая.
+                    Перед словом anniversary требуется порядковое
+                    числительное: the eightieth wedding anniversary.
+                  </p>
+
+                  <p class="evidence-quote">
+                    “Percy Arrowsmith, 105, and 100-year-old Florence
+                    celebrated their eightieth wedding anniversary...”
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+            <audio controls preload="metadata">
+  <source src="Новая запись 40 2.m4a" type="audio/mp4">
+</audio>
+                    <!-- LISTENING 1 TRANSLATION -->
+
+        <div
+          class="tab-panel"
+          id="listening-1-translation"
+        >
+
+          <div class="content-block">
+
+            <!-- KAZAKH TRANSLATION -->
+
+            <div class="language-content lang-kk">
+
+              <h3>Толық аударма</h3>
+
+              <p>
+                <strong>Ең ұзақ неке</strong>
+              </p>
+
+              <p>
+                Ұлыбританиялық ерлі-зайыптылар ең ұзақ некеде тұрғаны
+                үшін әлемдік рекорд орнатты. 105 жастағы Перси Арроусмит
+                пен 100 жастағы Флоренс 1 маусымда некелерінің
+                сексен жылдығын атап өтті.
+              </p>
+
+              <p>
+                Олар 1925 жылғы 1 маусымда Англияның Херефорд қаласында
+                үйленген. Сонымен қатар олар жастарының жалпы саны
+                бойынша ең қарт ерлі-зайыптылар ретінде әлемдік
+                рекордқа ие. Олардың жалпы жасы — 205 жас.
+              </p>
+
+              <p>
+                Ұлыбритания патшайымы Елизавета әлемдік рекорд орнатқан
+                жұпқа құттықтау ашықхатын жіберді.
+              </p>
+
+              <p>
+                Ол олардың некесін «тамаша жетістік» деп атап,
+                оларға жылы лебізін білдірді.
+              </p>
+
+              <p>
+                Рекорд иелері мерейтойларын өз үйлерінде отбасы
+                мүшелері мен бірнеше жақын достарының ортасында
+                өткен кешпен атап өтті.
+              </p>
+
+              <p>
+                Ерлі-зайыптылардың қызы Джейн Вулли ата-анасының
+                екеуі де өте жақсы денсаулықта екенін айтты.
+              </p>
+
+              <p>
+                Оның айтуынша, олардың қарым-қатынасы әлі де
+                сүйіспеншілікке толы.
+              </p>
+
+              <p>
+                Ол сондай-ақ олардың барлық қиындықтар мен жақсы
+                кезеңдерді бірге өткергенін айтты.
+              </p>
+
+              <p>
+                Ол олардың қарым-қатынасын өте жақын деп сипаттап,
+                оларды «бір бұршаққындағы екі бұршақтай» деп атады.
+              </p>
+
+              <p>
+                Ерлі-зайыптылар берік некенің құпиясын айтты:
+                әрбір жанжалдан кейін міндетті түрде кешірім сұрау
+                және кешірім сұрамай ұйықтамау.
+              </p>
+
+              <p>
+                Сондай-ақ олар ұйықтар алдында бір-бірін сүюді
+                және қол ұстасуды ұсынды.
+              </p>
+
+              <p>
+                Миссис Арроусмит BBC арнасына:
+                «Менің ойымша, біздің жолымыз болды.
+                Біз әлі де бір-бірімізді жақсы көреміз.
+                Ең маңыздысы — осы», — деді.
+              </p>
+
+            </div>
+
+            <!-- RUSSIAN TRANSLATION -->
+
+            <div class="language-content lang-ru">
+
+              <h3>Полный перевод</h3>
+
+              <p>
+                <strong>Самый долгий брак</strong>
+              </p>
+
+              <p>
+                Британская супружеская пара установила мировой рекорд
+                по продолжительности брака. 105-летний Перси Арроусмит
+                и 100-летняя Флоренс 1 июня отметили восьмидесятую
+                годовщину свадьбы.
+              </p>
+
+              <p>
+                Они поженились 1 июня 1925 года в Херефорде, Англия.
+                Они также установили мировой рекорд как самая пожилая
+                супружеская пара по общему возрасту — 205 лет.
+              </p>
+
+              <p>
+                Королева Великобритании Елизавета отправила
+                паре-рекордсмену поздравительную открытку.
+              </p>
+
+              <p>
+                Она назвала их брак «великолепным достижением»
+                и передала им тёплые поздравления.
+              </p>
+
+              <p>
+                Рекордсмены отметили годовщину праздником в своём доме
+                в окружении членов семьи и нескольких близких друзей.
+              </p>
+
+              <p>
+                Дочь пары, Джейн Вулли, сказала, что оба её родителя
+                находятся в прекрасной физической форме.
+              </p>
+
+              <p>
+                Она сказала, что между ними до сих пор сохраняются
+                очень тёплые и любящие отношения.
+              </p>
+
+              <p>
+                Она также отметила, что они оставались вместе
+                и в хорошие, и в трудные времена.
+              </p>
+
+              <p>
+                Она описала их отношения как очень близкие,
+                сравнив их с «двумя горошинами в одном стручке».
+              </p>
+
+              <p>
+                Супруги раскрыли секрет прочного брака:
+                всегда извиняться после каждого спора
+                и никогда не ложиться спать, не попросив прощения.
+              </p>
+
+              <p>
+                Они также посоветовали целоваться и держаться
+                за руки перед сном.
+              </p>
+
+              <p>
+                Миссис Арроусмит сказала BBC:
+                «Я думаю, нам очень повезло.
+                Мы всё ещё любим друг друга —
+                это самое важное».
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- LISTENING 1 VOCABULARY -->
+
+        <div
+          class="tab-panel"
+          id="listening-1-vocabulary"
+        >
+
+          <div class="content-block">
+
+            <!-- KAZAKH VOCABULARY -->
+
+            <div class="language-content lang-kk">
+
+              <h3>Vocabulary</h3>
+
+              <div class="vocabulary-list">
+
+                <div class="vocabulary-item">
+                  <strong>break a world record</strong>
+                  <span>— әлемдік рекорд орнату</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>the longest marriage</strong>
+                  <span>— ең ұзақ неке</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>wedding anniversary</strong>
+                  <span>— үйлену тойының жылдығы</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>eightieth</strong>
+                  <span>— сексенінші</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>combined age</strong>
+                  <span>— жастарының жалпы саны</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>record-breaking pair</strong>
+                  <span>— рекорд орнатқан жұп</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>congratulatory card</strong>
+                  <span>— құттықтау ашықхаты</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>splendid achievement</strong>
+                  <span>— тамаша жетістік</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>warm congratulations</strong>
+                  <span>— жылы құттықтаулар</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>surrounded by family</strong>
+                  <span>— отбасы мүшелерінің ортасында</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>as fit as a fiddle</strong>
+                  <span>— денсаулығы өте жақсы, сергек</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>loving relationship</strong>
+                  <span>— сүйіспеншілікке толы қарым-қатынас</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>through thick and thin</strong>
+                  <span>— жақсы және қиын кезеңдердің бәрінде</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>two peas in a pod</strong>
+                  <span>— бір-біріне өте ұқсас және жақын адамдар</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>lasting marriage</strong>
+                  <span>— берік, ұзаққа созылған неке</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>argument</strong>
+                  <span>— жанжал, дау</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>apologize</strong>
+                  <span>— кешірім сұрау</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>one another</strong>
+                  <span>— бір-бірін, бір-біріне</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>blessed</strong>
+                  <span>— жолы болған, бақытты</span>
+                </div>
+
+              </div>
+
+              <h3 class="subsection-title">
+                Useful paraphrases
+              </h3>
+
+              <div class="paraphrase-list">
+
+                <div class="paraphrase-item">
+                  <strong>
+                    sent a congratulatory card
+                  </strong>
+
+                  <span>
+                    → sent a card to congratulate them
+                  </span>
+
+                  <small>
+                    Құттықтау ашықхатын жіберді
+                    → оларды құттықтау үшін ашықхат жіберді.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    celebrated with a party in their home
+                  </strong>
+
+                  <span>
+                    → had an anniversary party at home
+                  </span>
+
+                  <small>
+                    Мерейтойды үйлерінде кешпен атап өтті
+                    → мерейтойлық кешті үйде өткізді.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    as fit as fiddles
+                  </strong>
+
+                  <span>
+                    → very healthy and active
+                  </span>
+
+                  <small>
+                    Денсаулығы өте жақсы
+                    → дені сау және белсенді.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    a lasting marriage
+                  </strong>
+
+                  <span>
+                    → a strong and successful marriage
+                  </span>
+
+                  <small>
+                    Берік неке
+                    → ұзаққа созылған табысты неке.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    love one another
+                  </strong>
+
+                  <span>
+                    → love each other
+                  </span>
+
+                  <small>
+                    Бір-бірін жақсы көру
+                    → өзара жақсы көру.
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- RUSSIAN VOCABULARY -->
+
+            <div class="language-content lang-ru">
+
+              <h3>Vocabulary</h3>
+
+              <div class="vocabulary-list">
+
+                <div class="vocabulary-item">
+                  <strong>break a world record</strong>
+                  <span>— установить мировой рекорд</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>the longest marriage</strong>
+                  <span>— самый долгий брак</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>wedding anniversary</strong>
+                  <span>— годовщина свадьбы</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>eightieth</strong>
+                  <span>— восьмидесятый</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>combined age</strong>
+                  <span>— общий возраст</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>record-breaking pair</strong>
+                  <span>— пара-рекордсмен</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>congratulatory card</strong>
+                  <span>— поздравительная открытка</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>splendid achievement</strong>
+                  <span>— великолепное достижение</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>warm congratulations</strong>
+                  <span>— тёплые поздравления</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>surrounded by family</strong>
+                  <span>— в окружении семьи</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>as fit as a fiddle</strong>
+                  <span>— в прекрасной физической форме</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>loving relationship</strong>
+                  <span>— любящие, тёплые отношения</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>through thick and thin</strong>
+                  <span>— и в хорошие, и в трудные времена</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>two peas in a pod</strong>
+                  <span>— очень похожие и близкие люди</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>lasting marriage</strong>
+                  <span>— прочный, долгий брак</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>argument</strong>
+                  <span>— спор, ссора</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>apologize</strong>
+                  <span>— извиняться</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>one another</strong>
+                  <span>— друг друга</span>
+                </div>
+
+                <div class="vocabulary-item">
+                  <strong>blessed</strong>
+                  <span>— счастливый, тот, кому повезло</span>
+                </div>
+
+              </div>
+
+              <h3 class="subsection-title">
+                Useful paraphrases
+              </h3>
+
+              <div class="paraphrase-list">
+
+                <div class="paraphrase-item">
+                  <strong>
+                    sent a congratulatory card
+                  </strong>
+
+                  <span>
+                    → sent a card to congratulate them
+                  </span>
+
+                  <small>
+                    Отправила поздравительную открытку
+                    → отправила открытку, чтобы поздравить их.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    celebrated with a party in their home
+                  </strong>
+
+                  <span>
+                    → had an anniversary party at home
+                  </span>
+
+                  <small>
+                    Отметили годовщину праздником в своём доме
+                    → устроили праздничную встречу дома.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    as fit as fiddles
+                  </strong>
+
+                  <span>
+                    → very healthy and active
+                  </span>
+
+                  <small>
+                    В прекрасной физической форме
+                    → здоровые и активные.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    a lasting marriage
+                  </strong>
+
+                  <span>
+                    → a strong and successful marriage
+                  </span>
+
+                  <small>
+                    Прочный брак
+                    → долгий и успешный брак.
+                  </small>
+                </div>
+
+                <div class="paraphrase-item">
+                  <strong>
+                    love one another
+                  </strong>
+
+                  <span>
+                    → love each other
+                  </span>
+
+                  <small>
+                    Любить друг друга
+                    → испытывать взаимную любовь.
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- LISTENING 1 STRATEGY -->
+
+        <div
+          class="tab-panel"
+          id="listening-1-strategy"
+        >
+
+          <div class="content-block">
+
+            <!-- KAZAKH STRATEGY -->
+
+            <div class="language-content lang-kk">
+
+              <h3>
+                Бұл Listening тапсырмасын қалай орындау керек?
+              </h3>
+
+              <div class="strategy-step">
+
+                <strong>
+                  1. Сұрақтағы негізгі сөздерді алдын ала оқу
+                </strong>
+
+                <p>
+                  Аудионы қоспас бұрын Queen Elizabeth,
+                  anniversary, 105, lasting marriage және
+                  Jane Woolley сөздерін белгілеу керек.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  2. Сандарды мұқият ажырату
+                </strong>
+
+                <p>
+                  Аудиода 105, 100, 80 және 205 сандары кездеседі.
+                  105 — Percy-дің жасы, 100 — Florence-тің жасы,
+                  80 — неке жылдығы, 205 — олардың жалпы жасы.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  3. Сөздің грамматикалық формасына назар аудару
+                </strong>
+
+                <p>
+                  Wedding anniversary алдында реттік сан қажет.
+                  Сондықтан eighty емес, eightieth қолданылады.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  4. Идиомаларды тура аудармау
+                </strong>
+
+                <p>
+                  As fit as fiddles — скрипка сияқты деген сөз емес.
+                  Бұл денсаулығы өте жақсы деген идиома.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  5. Синоним мен перефразаны тану
+                </strong>
+
+                <p>
+                  Lasting marriage тіркесінің мағынасы
+                  strong and successful marriage тіркесіне жақын.
+                </p>
+
+              </div>
+
+              <h3 class="subsection-title">
+                Сұрақтар бойынша шешу жолы
+              </h3>
+
+              <div class="question-solving-list">
+
+                <div class="question-solving-item">
+                  <strong>Question 1</strong>
+
+                  <p>
+                    Queen Elizabeth туралы сөйлемнен
+                    a congratulatory card тіркесін табамыз.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 2</strong>
+
+                  <p>
+                    Party сөзінен кейін оның өткен орны
+                    in their home деп беріледі.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 3</strong>
+
+                  <p>
+                    Кешті кім өткізгенін анықтаймыз:
+                    The record breakers.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 4</strong>
+
+                  <p>
+                    Anniversary алдында реттік сан қажет:
+                    eightieth.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 5</strong>
+
+                  <p>
+                    Percy Arrowsmith есімінен кейін бірден
+                    105 саны берілген.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 6</strong>
+
+                  <p>
+                    Аудиодағы дайын сөйлемді тыңдаймыз:
+                    We still love one another.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 7</strong>
+
+                  <p>
+                    Lasting marriage — ұзақ әрі берік,
+                    табысты неке.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 8</strong>
+
+                  <p>
+                    Jane Woolley ата-анасын
+                    as fit as fiddles деп сипаттайды.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- RUSSIAN STRATEGY -->
+
+            <div class="language-content lang-ru">
+
+              <h3>
+                Как нужно было решать этот Listening?
+              </h3>
+
+              <div class="strategy-step">
+
+                <strong>
+                  1. Заранее прочитать ключевые слова
+                </strong>
+
+                <p>
+                  Перед прослушиванием нужно отметить Queen Elizabeth,
+                  anniversary, 105, lasting marriage и Jane Woolley.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  2. Внимательно различать числа
+                </strong>
+
+                <p>
+                  В аудио встречаются 105, 100, 80 и 205.
+                  105 — возраст Percy, 100 — возраст Florence,
+                  80 — годовщина свадьбы, а 205 — их общий возраст.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  3. Обратить внимание на грамматическую форму
+                </strong>
+
+                <p>
+                  Перед wedding anniversary требуется порядковое
+                  числительное. Поэтому используется eightieth,
+                  а не eighty.
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  4. Не переводить идиомы буквально
+                </strong>
+
+                <p>
+                  As fit as fiddles не означает «как скрипки».
+                  Это идиома со значением «в отличной форме».
+                </p>
+
+              </div>
+
+              <div class="strategy-step">
+
+                <strong>
+                  5. Узнавать синонимы и перефразы
+                </strong>
+
+                <p>
+                  Lasting marriage близко по значению
+                  к strong and successful marriage.
+                </p>
+
+              </div>
+
+              <h3 class="subsection-title">
+                Как решать каждый вопрос
+              </h3>
+
+              <div class="question-solving-list">
+
+                <div class="question-solving-item">
+                  <strong>Question 1</strong>
+
+                  <p>
+                    В предложении о Queen Elizabeth находим
+                    a congratulatory card.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 2</strong>
+
+                  <p>
+                    После упоминания party указано место:
+                    in their home.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 3</strong>
+
+                  <p>
+                    Определяем, кто устроил праздник:
+                    The record breakers.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 4</strong>
+
+                  <p>
+                    Перед anniversary требуется порядковое
+                    числительное eightieth.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 5</strong>
+
+                  <p>
+                    Число 105 стоит сразу после имени
+                    Percy Arrowsmith.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 6</strong>
+
+                  <p>
+                    В аудио звучит готовая фраза:
+                    We still love one another.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 7</strong>
+
+                  <p>
+                    Lasting marriage означает долгий,
+                    прочный и успешный брак.
+                  </p>
+                </div>
+
+                <div class="question-solving-item">
+                  <strong>Question 8</strong>
+
+                  <p>
+                    Jane Woolley описывает родителей словами
+                    as fit as fiddles.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- LISTENING 2 БУДЕТ ДОБАВЛЕН ПОСЛЕ ЭТОЙ СТРОКИ -->
+            
