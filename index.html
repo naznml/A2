@@ -9745,115 +9745,163 @@
 
       </div>
 
-      <div class="tab-buttons">
-
-        <button
-          type="button"
-          class="tab-button active"
-          data-tab-target="reading-1-test"
-        >
-          Test
-        </button>
-
-        <button
-          type="button"
-          class="tab-button"
-          data-tab-target="reading-1-text"
-        >
-          Text EN
-        </button>
-
-        <button
-          type="button"
-          class="tab-button"
-          data-tab-target="reading-1-translation"
-        >
-          <span class="language-content lang-kk">
-            Аударма
-          </span>
-
-          <span class="language-content lang-ru">
-            Перевод
-          </span>
-        </button>
-
-        <button
-          type="button"
-          class="tab-button"
-          data-tab-target="reading-1-vocabulary"
-        >
-          Vocabulary
-        </button>
-
-        <button
-          type="button"
-          class="tab-button"
-          data-tab-target="reading-1-strategy"
-        >
-          <span class="language-content lang-kk">
-            Қалай орындау керек
-          </span>
-
-          <span class="language-content lang-ru">
-            Как решить
-          </span>
-        </button>
-
-      </div>
-
-      <!-- READING 1 TEST -->
+    <!-- READING 1: FULL TEXT, THEN TEST -->
 
       <div
-        class="tab-panel active"
+        class="reading-main-test"
         id="reading-1-test"
       >
 
-        <p class="test-instruction">
-          <span class="language-content lang-kk">
-            Мәтінді мұқият оқып, әр сұрақ бойынша бір жауапты таңдаңыз.
-            Нәтижені көрсеткеннен кейін дұрыс жауап жасыл,
-            ал таңдалған қате жауап қызыл түспен белгіленеді.
-          </span>
+        <!-- FULL READING TEXT FIRST -->
 
-          <span class="language-content lang-ru">
-            Внимательно прочитайте текст и выберите один ответ
-            в каждом вопросе. После показа результата правильный ответ
-            будет выделен зелёным, а выбранный неправильный — красным.
-          </span>
-        </p>
-
-        <div class="reading-text-preview">
+        <div class="reading-text-preview reading-full-text">
 
           <h3>
             Thanksgiving: a Brief History
           </h3>
 
-          <p>
-            Thanksgiving- is a special holiday for both Americans
-            and Canadians. The United States celebrates it on every
-            4th Thursday in November. In Canada, it's always celebrated
-            on the 2nd Monday in October.
-          </p>
-
-          <p>
-            Business centers and malls are closed, and children don't
-            go to school for 4 days. People travel across the country
-            to be with their families and celebrate with a big dinner.
-          </p>
-
-          <p>
+          <div
+            class="locked-message reading-locked-message"
+            data-reading="1"
+          >
             <span class="language-content lang-kk">
-              Толық мәтінді көру үшін <strong>Text EN</strong>
-              қойындысын ашыңыз.
+              Нәтижені көрсеткеннен кейін жауап орналасқан сөйлемдер
+              Q35–Q42 белгілерімен ерекшеленеді.
             </span>
 
             <span class="language-content lang-ru">
-              Чтобы прочитать полный текст, откройте вкладку
-              <strong>Text EN</strong>.
+              После показа результата предложения с ответами
+              будут выделены метками Q35–Q42.
             </span>
-          </p>
+          </div>
+
+          <div
+            class="transcript-text"
+            id="reading-1-text-content"
+          >
+
+            <p>
+              <span
+                class="transcript-answer"
+                data-related-question="42"
+              >
+                <span class="question-marker">Q42</span>
+
+                Thanksgiving- is a special holiday for both
+                Americans and Canadians.
+              </span>
+
+              <span
+                class="transcript-answer"
+                data-related-question="39"
+              >
+                <span class="question-marker">Q39</span>
+
+                The United States celebrates it on every
+                4th Thursday in November.
+              </span>
+
+              In Canada, it's always celebrated on the
+              2nd Monday in October.
+            </p>
+
+            <p>
+              <span
+                class="transcript-answer"
+                data-related-question="35 38"
+              >
+                <span class="question-marker">Q35</span>
+                <span class="question-marker">Q38</span>
+
+                Business centers and malls are closed,
+              </span>
+
+              and children don't go to school for 4 days.
+
+              <span
+                class="transcript-answer"
+                data-related-question="40"
+              >
+                <span class="question-marker">Q40</span>
+
+                People travel across the country to be with
+                their families and celebrate with a big dinner.
+              </span>
+            </p>
+
+            <p>
+              The tradition of celebrating Thanksgiving was started
+              by Native American Indians and the Pilgrims.
+
+              The Pilgrims travelled from England to Holland,
+              and then half-way around the world to America
+              to escape persecution and find religious freedom.
+
+              Many organizations in America prepare free Thanksgiving
+              meals for those that are less fortunate and
+
+              <span
+                class="transcript-answer"
+                data-related-question="37"
+              >
+                <span class="question-marker">Q37</span>
+
+                sends food to over 35,000 families for this holiday.
+              </span>
+            </p>
+
+            <p>
+              <span
+                class="transcript-answer"
+                data-related-question="41"
+              >
+                <span class="question-marker">Q41</span>
+
+                Thanksgiving traditions vary depending on the region,
+              </span>
+
+              but playing backyard football on Turkey Day with family
+              and friends has been a tradition across the country
+              since the 19th century.
+
+              The annual White House tradition of pardoning the turkey
+              is televised and watched by millions.
+            </p>
+
+            <p>
+              <span
+                class="transcript-answer"
+                data-related-question="36"
+              >
+                <span class="question-marker">Q36</span>
+
+                The first official pardoning happened in 1989
+                when George Bush senior stopped a turkey from
+                ending up on the table as the main course.
+              </span>
+            </p>
+
+          </div>
 
         </div>
+
+        <!-- TEST UNDER THE TEXT -->
+
+        <p class="test-instruction">
+          <span class="language-content lang-kk">
+            Жоғарыдағы мәтінді мұқият оқып, әр сұрақ бойынша
+            бір дұрыс жауапты таңдаңыз. Нәтижені көрсеткеннен кейін
+            дұрыс жауап жасыл, ал таңдалған қате жауап қызыл түспен
+            белгіленеді.
+          </span>
+
+          <span class="language-content lang-ru">
+            Внимательно прочитайте текст выше и выберите один
+            правильный ответ в каждом вопросе. После показа результата
+            правильный ответ будет выделен зелёным, а выбранный
+            неправильный — красным.
+          </span>
+        </p>
 
         <form
           class="reading-test-form"
@@ -10875,148 +10923,39 @@
 
       </div>
 
-      <!-- READING 1 TEXT -->
+            <!-- EXTRA MATERIALS AFTER THE TEST -->
 
-      <div
-        class="tab-panel"
-        id="reading-1-text"
-      >
+      <div class="tab-buttons reading-extra-tabs">
 
-        <div class="content-block">
+        <button
+          type="button"
+          class="tab-button"
+          data-tab-target="reading-1-translation"
+        >
+          <span class="language-content lang-kk">Аударма</span>
+          <span class="language-content lang-ru">Перевод</span>
+        </button>
 
-          <h3>
-            Thanksgiving: a Brief History
-          </h3>
+        <button
+          type="button"
+          class="tab-button"
+          data-tab-target="reading-1-vocabulary"
+        >
+          Vocabulary
+        </button>
 
-          <div
-            class="locked-message reading-locked-message"
-            data-reading="1"
-          >
-            <span class="language-content lang-kk">
-              Нәтижені көрсеткеннен кейін жауап орналасқан сөйлемдер
-              Q35–Q42 белгілерімен ерекшеленеді.
-            </span>
-
-            <span class="language-content lang-ru">
-              После показа результата предложения с ответами
-              будут выделены метками Q35–Q42.
-            </span>
-          </div>
-
-          <div
-            class="transcript-text"
-            id="reading-1-text-content"
-          >
-
-            <p>
-              <span
-                class="transcript-answer"
-                data-related-question="42"
-              >
-                <span class="question-marker">Q42</span>
-
-                Thanksgiving- is a special holiday for both
-                Americans and Canadians.
-              </span>
-
-              <span
-                class="transcript-answer"
-                data-related-question="39"
-              >
-                <span class="question-marker">Q39</span>
-
-                The United States celebrates it on every
-                4th Thursday in November.
-              </span>
-
-              In Canada, it's always celebrated on the
-              2nd Monday in October.
-            </p>
-
-            <p>
-              <span
-                class="transcript-answer"
-                data-related-question="35 38"
-              >
-                <span class="question-marker">Q35</span>
-                <span class="question-marker">Q38</span>
-
-                Business centers and malls are closed,
-              </span>
-
-              and children don't go to school for 4 days.
-
-              <span
-                class="transcript-answer"
-                data-related-question="40"
-              >
-                <span class="question-marker">Q40</span>
-
-                People travel across the country to be with
-                their families and celebrate with a big dinner.
-              </span>
-            </p>
-
-            <p>
-              The tradition of celebrating Thanksgiving was started
-              by Native American Indians and the Pilgrims.
-
-              The Pilgrims travelled from England to Holland,
-              and then half-way around the world to America
-              to escape persecution and find religious freedom.
-
-              Many organizations in America prepare free Thanksgiving
-              meals for those that are less fortunate and
-
-              <span
-                class="transcript-answer"
-                data-related-question="37"
-              >
-                <span class="question-marker">Q37</span>
-
-                sends food to over 35,000 families for this holiday.
-              </span>
-            </p>
-
-            <p>
-              <span
-                class="transcript-answer"
-                data-related-question="41"
-              >
-                <span class="question-marker">Q41</span>
-
-                Thanksgiving traditions vary depending on the region,
-              </span>
-
-              but playing backyard football on Turkey Day with family
-              and friends has been a tradition across the country
-              since the 19th century.
-
-              The annual White House tradition of pardoning the turkey
-              is televised and watched by millions.
-            </p>
-
-            <p>
-              <span
-                class="transcript-answer"
-                data-related-question="36"
-              >
-                <span class="question-marker">Q36</span>
-
-                The first official pardoning happened in 1989
-                when George Bush senior stopped a turkey from
-                ending up on the table as the main course.
-              </span>
-            </p>
-
-          </div>
-
-        </div>
+        <button
+          type="button"
+          class="tab-button"
+          data-tab-target="reading-1-strategy"
+        >
+          <span class="language-content lang-kk">Қалай орындау керек</span>
+          <span class="language-content lang-ru">Как решить</span>
+        </button>
 
       </div>
 
-      <!-- READING 1 TRANSLATION БУДЕТ ДОБАВЛЕН ЗДЕСЬ -->
-            <!-- READING 1 TRANSLATION -->
+<!-- READING 1 TRANSLATION -->
 
       <div
         class="tab-panel"
@@ -11825,7 +11764,23 @@
       background: #eff6ff;
     }
 
-    .reading-text-preview h3 {
+  
+
+  .reading-full-text {
+    max-height: none;
+  }
+
+  .reading-full-text h4 {
+    margin: 22px 0 8px;
+    color: var(--primary-dark);
+    font-size: 18px;
+  }
+
+  .reading-full-text p {
+    line-height: 1.75;
+  }
+
+  .reading-text-preview h3 {
       margin: 0 0 12px;
       color: var(--primary-dark);
     }
@@ -12491,114 +12446,228 @@
 
     </div>
 
-    <div class="tab-buttons">
-
-      <button
-        type="button"
-        class="tab-button active"
-        data-tab-target="reading-2-test"
-      >
-        Test
-      </button>
-
-      <button
-        type="button"
-        class="tab-button"
-        data-tab-target="reading-2-text"
-      >
-        Text EN
-      </button>
-
-      <button
-        type="button"
-        class="tab-button"
-        data-tab-target="reading-2-translation"
-      >
-        <span class="language-content lang-kk">
-          Аударма
-        </span>
-
-        <span class="language-content lang-ru">
-          Перевод
-        </span>
-      </button>
-
-      <button
-        type="button"
-        class="tab-button"
-        data-tab-target="reading-2-vocabulary"
-      >
-        Vocabulary
-      </button>
-
-      <button
-        type="button"
-        class="tab-button"
-        data-tab-target="reading-2-strategy"
-      >
-        <span class="language-content lang-kk">
-          Қалай орындау керек
-        </span>
-
-        <span class="language-content lang-ru">
-          Как решить
-        </span>
-      </button>
-
-    </div>
-
-    <!-- READING 2 TEST -->
+    <!-- READING 2: FULL TEXT, THEN TEST -->
 
     <div
-      class="tab-panel active"
+      class="reading-main-test"
       id="reading-2-test"
     >
 
-      <p class="test-instruction">
-        <span class="language-content lang-kk">
-          Мәтінді мұқият оқып, әр сұрақ бойынша бір жауапты таңдаңыз.
-          Нәтижеден кейін дұрыс жауап жасыл,
-          ал таңдалған қате жауап қызыл түспен белгіленеді.
-        </span>
+      <!-- FULL READING TEXT FIRST -->
 
-        <span class="language-content lang-ru">
-          Внимательно прочитайте текст и выберите один ответ
-          в каждом вопросе. После проверки правильный ответ
-          будет выделен зелёным, а выбранный неправильный — красным.
-        </span>
-      </p>
+      <div class="reading-text-preview reading-full-text">
 
-      <div class="reading-text-preview">
+          <h3>
+            The Capitals of the United Kingdom
+          </h3>
 
-        <h3>
-          The Capitals of the United Kingdom
-        </h3>
-
-        <p>
-          The United Kingdom consists of England, Scotland,
-          Wales, and Northern Ireland.
-        </p>
-
-        <p>
-          London is the capital of England and the UK.
-          Edinburgh is the capital of Scotland.
-          Belfast is the capital of Northern Ireland,
-          and Cardiff is the capital city of Wales.
-        </p>
-
-        <p>
+          <div
+          class="locked-message reading-locked-message"
+          data-reading="2"
+        >
           <span class="language-content lang-kk">
-            Толық мәтінді оқу үшін
-            <strong>Text EN</strong> қойындысын ашыңыз.
+            Нәтижені көрсеткеннен кейін жауап орналасқан сөйлемдер
+            Q43–Q50 белгілерімен ерекшеленеді.
           </span>
 
           <span class="language-content lang-ru">
-            Чтобы прочитать полный текст,
-            откройте вкладку <strong>Text EN</strong>.
+            После показа результата предложения с ответами
+            будут выделены метками Q43–Q50.
           </span>
-        </p>
+        </div>
 
-      </div>
+          <div
+          class="transcript-text"
+          id="reading-2-text-content"
+        >
+
+          <p>
+            The United Kingdom consists of England, Scotland,
+            Wales, and Northern Ireland.
+          </p>
+
+          <h4>London</h4>
+
+          <p>
+            <span
+              class="transcript-answer"
+              data-related-question="44"
+            >
+              <span class="question-marker">Q44</span>
+
+              London is the capital of England and the UK.
+            </span>
+
+            It is on the river Thames with approximately
+            8,000,000, people.
+
+            London has many famous monuments as the Tower of London,
+            Big Ben, Buckingham Palace.
+
+            It has museums and galleries as the British Museum,
+            the National Gallery, and Tate Modern.
+          </p>
+
+          <p>
+            <span
+              class="transcript-answer"
+              data-related-question="48 49"
+            >
+              <span class="question-marker">Q48</span>
+              <span class="question-marker">Q49</span>
+
+              The West End, with locations like Oxford Street,
+              Leicester Square, Covent Garden, and Piccadilly Circus
+              is London's entertainment and shopping district.
+            </span>
+
+            London's tallest building is One Canada Square
+            in Canary Wharf.
+
+            The Houses of Parliament is the home
+            of the Government of the UK.
+          </p>
+
+          <h4>Edinburgh</h4>
+
+          <p>
+            <span
+              class="transcript-answer"
+              data-related-question="46"
+            >
+              <span class="question-marker">Q46</span>
+
+              Edinburgh is the capital of Scotland
+              and its second after Glasgow on the North Sea.
+            </span>
+
+            Scottish Parliament is here.
+
+            Its population is 450,000.
+
+            In August, during the Edinburgh festival,
+            its population doubles.
+          </p>
+
+          <p>
+            <span
+              class="transcript-answer"
+              data-related-question="43"
+            >
+              <span class="question-marker">Q43</span>
+
+              The main attraction is Edinburgh Castle,
+              at the top of an extinct volcano,
+            </span>
+
+            and the Royal Mile - the street which leads down
+            from the Castle.
+
+            St Giles Cathedral, Princes Street for shopping
+            and Forth Rail Bridge on the Firth of Forth for walking.
+
+            Famous park is Princes Street Gardens.
+          </p>
+
+          <h4>Belfast</h4>
+
+          <p>
+            Belfast is the capital of Northern Ireland,
+            near the River Lagan, with population 280,000.
+
+            It is near Ireland.
+
+            <span
+              class="transcript-answer"
+              data-related-question="50"
+            >
+              <span class="question-marker">Q50</span>
+
+              Many parts of the city center are being redeveloped.
+            </span>
+          </p>
+
+          <p>
+            New developments include Victoria Square,
+            the Cathedral Quarter and
+
+            <span
+              class="transcript-answer"
+              data-related-question="47"
+            >
+              <span class="question-marker">Q47</span>
+
+              the regeneration of the Titanic Quarter
+              (the Titanic was built here).
+            </span>
+
+            Belfast has over forty public parks.
+
+            The most popular is the Botanic Gardens.
+          </p>
+
+          <h4>Cardiff</h4>
+
+          <p>
+            Cardiff is south coast, the capital city of Wales.
+
+            The river Taff flows through this city
+            with a population of approximately 321,000.
+
+            <span
+              class="transcript-answer"
+              data-related-question="45"
+            >
+              <span class="question-marker">Q45</span>
+
+              Cardiff has beautiful places of interest,
+              and is one of the top ten cities to visit
+              according to the British Tourist Authority.
+            </span>
+          </p>
+
+          <p>
+            The city's oldest monument is Cardiff Castle.
+
+            Other places to visit are the Wales Millennium Centre,
+            home to the Welsh National Opera,
+            the Millennium Sports stadium,
+            and the National Museum and Gallery.
+
+            Cardiff's town center is green -
+            its famous parks are Roath park,
+            Cathays park and Bute park.
+
+            <span
+              class="transcript-answer"
+              data-related-question="49"
+            >
+              <span class="question-marker">Q49</span>
+
+              Cardiff is one of the best places
+              for shopping in the UK.
+            </span>
+          </p>
+
+        </div>
+
+        </div>
+
+      <!-- TEST UNDER THE TEXT -->
+
+      <p class="test-instruction">
+        <span class="language-content lang-kk">
+          Жоғарыдағы мәтінді мұқият оқып, әр сұрақ бойынша
+          бір дұрыс жауапты таңдаңыз. Нәтижеден кейін дұрыс жауап
+          жасыл, ал таңдалған қате жауап қызыл түспен белгіленеді.
+        </span>
+
+        <span class="language-content lang-ru">
+          Внимательно прочитайте текст выше и выберите один
+          правильный ответ в каждом вопросе. После проверки правильный
+          ответ будет выделен зелёным, а выбранный неправильный — красным.
+        </span>
+      </p>
 
       <form
         class="reading-test-form"
@@ -13633,215 +13702,39 @@
 
     </div>
 
-    <!-- READING 2 TEXT -->
+        <!-- EXTRA MATERIALS AFTER THE TEST -->
 
-    <div
-      class="tab-panel"
-      id="reading-2-text"
-    >
+    <div class="tab-buttons reading-extra-tabs">
 
-      <div class="content-block">
+      <button
+        type="button"
+        class="tab-button"
+        data-tab-target="reading-2-translation"
+      >
+        <span class="language-content lang-kk">Аударма</span>
+        <span class="language-content lang-ru">Перевод</span>
+      </button>
 
-        <h3>
-          The Capitals of the United Kingdom
-        </h3>
+      <button
+        type="button"
+        class="tab-button"
+        data-tab-target="reading-2-vocabulary"
+      >
+        Vocabulary
+      </button>
 
-        <div
-          class="locked-message reading-locked-message"
-          data-reading="2"
-        >
-          <span class="language-content lang-kk">
-            Нәтижені көрсеткеннен кейін жауап орналасқан сөйлемдер
-            Q43–Q50 белгілерімен ерекшеленеді.
-          </span>
-
-          <span class="language-content lang-ru">
-            После показа результата предложения с ответами
-            будут выделены метками Q43–Q50.
-          </span>
-        </div>
-
-        <div
-          class="transcript-text"
-          id="reading-2-text-content"
-        >
-
-          <p>
-            The United Kingdom consists of England, Scotland,
-            Wales, and Northern Ireland.
-          </p>
-
-          <h4>London</h4>
-
-          <p>
-            <span
-              class="transcript-answer"
-              data-related-question="44"
-            >
-              <span class="question-marker">Q44</span>
-
-              London is the capital of England and the UK.
-            </span>
-
-            It is on the river Thames with approximately
-            8,000,000, people.
-
-            London has many famous monuments as the Tower of London,
-            Big Ben, Buckingham Palace.
-
-            It has museums and galleries as the British Museum,
-            the National Gallery, and Tate Modern.
-          </p>
-
-          <p>
-            <span
-              class="transcript-answer"
-              data-related-question="48 49"
-            >
-              <span class="question-marker">Q48</span>
-              <span class="question-marker">Q49</span>
-
-              The West End, with locations like Oxford Street,
-              Leicester Square, Covent Garden, and Piccadilly Circus
-              is London's entertainment and shopping district.
-            </span>
-
-            London's tallest building is One Canada Square
-            in Canary Wharf.
-
-            The Houses of Parliament is the home
-            of the Government of the UK.
-          </p>
-
-          <h4>Edinburgh</h4>
-
-          <p>
-            <span
-              class="transcript-answer"
-              data-related-question="46"
-            >
-              <span class="question-marker">Q46</span>
-
-              Edinburgh is the capital of Scotland
-              and its second after Glasgow on the North Sea.
-            </span>
-
-            Scottish Parliament is here.
-
-            Its population is 450,000.
-
-            In August, during the Edinburgh festival,
-            its population doubles.
-          </p>
-
-          <p>
-            <span
-              class="transcript-answer"
-              data-related-question="43"
-            >
-              <span class="question-marker">Q43</span>
-
-              The main attraction is Edinburgh Castle,
-              at the top of an extinct volcano,
-            </span>
-
-            and the Royal Mile - the street which leads down
-            from the Castle.
-
-            St Giles Cathedral, Princes Street for shopping
-            and Forth Rail Bridge on the Firth of Forth for walking.
-
-            Famous park is Princes Street Gardens.
-          </p>
-
-          <h4>Belfast</h4>
-
-          <p>
-            Belfast is the capital of Northern Ireland,
-            near the River Lagan, with population 280,000.
-
-            It is near Ireland.
-
-            <span
-              class="transcript-answer"
-              data-related-question="50"
-            >
-              <span class="question-marker">Q50</span>
-
-              Many parts of the city center are being redeveloped.
-            </span>
-          </p>
-
-          <p>
-            New developments include Victoria Square,
-            the Cathedral Quarter and
-
-            <span
-              class="transcript-answer"
-              data-related-question="47"
-            >
-              <span class="question-marker">Q47</span>
-
-              the regeneration of the Titanic Quarter
-              (the Titanic was built here).
-            </span>
-
-            Belfast has over forty public parks.
-
-            The most popular is the Botanic Gardens.
-          </p>
-
-          <h4>Cardiff</h4>
-
-          <p>
-            Cardiff is south coast, the capital city of Wales.
-
-            The river Taff flows through this city
-            with a population of approximately 321,000.
-
-            <span
-              class="transcript-answer"
-              data-related-question="45"
-            >
-              <span class="question-marker">Q45</span>
-
-              Cardiff has beautiful places of interest,
-              and is one of the top ten cities to visit
-              according to the British Tourist Authority.
-            </span>
-          </p>
-
-          <p>
-            The city's oldest monument is Cardiff Castle.
-
-            Other places to visit are the Wales Millennium Centre,
-            home to the Welsh National Opera,
-            the Millennium Sports stadium,
-            and the National Museum and Gallery.
-
-            Cardiff's town center is green -
-            its famous parks are Roath park,
-            Cathays park and Bute park.
-
-            <span
-              class="transcript-answer"
-              data-related-question="49"
-            >
-              <span class="question-marker">Q49</span>
-
-              Cardiff is one of the best places
-              for shopping in the UK.
-            </span>
-          </p>
-
-        </div>
-
-      </div>
+      <button
+        type="button"
+        class="tab-button"
+        data-tab-target="reading-2-strategy"
+      >
+        <span class="language-content lang-kk">Қалай орындау керек</span>
+        <span class="language-content lang-ru">Как решить</span>
+      </button>
 
     </div>
 
-    <!-- READING 2 TRANSLATION БУДЕТ ДОБАВЛЕН ЗДЕСЬ -->
-        <!-- READING 2 TRANSLATION -->
+<!-- READING 2 TRANSLATION -->
 
     <div
       class="tab-panel"
@@ -15382,6 +15275,25 @@
     .english-reset-button {
       width: 100%;
     }
+  }
+
+
+  /* Reading is displayed as a normal test: full text first, questions below. */
+  .reading-main-test {
+    display: block;
+  }
+
+  .reading-full-text {
+    margin-bottom: 24px;
+  }
+
+  .reading-full-text .transcript-text {
+    margin-top: 14px;
+  }
+
+  .reading-extra-tabs {
+    margin-top: 24px;
+    margin-bottom: 16px;
   }
 </style>
 
